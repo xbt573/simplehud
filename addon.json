@@ -1,0 +1,14 @@
+{
+    "title": "Simple HUD",
+    "type": "effects",
+    "tags": [
+        "build",
+        "fun"
+    ],
+    "ignore": [
+        ".github/",
+	".git/",
+	".git/*",
+	".github/*"
+    ]
+}
