@@ -1,12 +1,11 @@
+local scrW = ScrW()
+local scrH = ScrH()
 hook.Add("HUDPaint", "DrawHUD", function ()
 	local player = LocalPlayer()
 
 	if not player:Alive() then
 		return
 	end
-
-	local scrW = ScrW()
-	local scrH = ScrH()
 
 	local max_width = (scrW / 5)
 	local max_sub_width = max_width + 4
@@ -20,7 +19,7 @@ hook.Add("HUDPaint", "DrawHUD", function ()
 	local suit_y = scrH - 75
 	local ammo_y = scrH - 35
 
-	local suitpower = player:GetSuitPower()
+	local suitpower = player:Armor()
 	local health = player:Health()
 
 	-- Set text color and font
@@ -73,7 +72,7 @@ hook.Add("HUDPaint", "DrawHUD", function ()
 	local ammo_max = weapon:GetMaxClip1() or 0
 	local ammo_curr = weapon:Clip1() or 0
 
-	if weapon ~= nil and player:Alive() then
+	if weapon ~= nil then
 
 		width = (scrW / 5) / ammo_max
 
