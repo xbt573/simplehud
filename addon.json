@@ -9,6 +9,8 @@
         ".github/",
 	".git/",
 	".git/*",
-	".github/*"
+	".github/*",
+	"README.md",
+	"LICENSE"
     ]
 }
